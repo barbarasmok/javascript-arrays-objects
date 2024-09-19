@@ -27,249 +27,200 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
       rel="stylesheet"
     />
+
     <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+
     <script
       src="https://kit.fontawesome.com/f8c7a943f3.js"
       crossorigin="anonymous"
     ></script>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <!-- Navbar -->
+    <nav
+      class="navbar fixed-top navbar-dark bg-dark navbar-expand-lg text-white mx-auto"
+      data-bs-theme="dark"
+    >
       <div class="container">
-        <a class="navbar-brand" href="#">Inmobiliaria ADL</a>
+        <a class="navbar-brand" href="./index.html">
+          <img
+            src="./assets/imgs/barbsmok-white-logo.png"
+            alt="Logo Cupon"
+            width="70%"
+            height="auto"
+          />
+        </a>
         <button
           class="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
-          data-bs-target="#navbarTogglerDemo02"
-          aria-controls="navbarTogglerDemo02"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <!-- <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li> -->
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" href="#">En venta</a>
+              <a class="nav-link text-white" href="./venta.html">Venta</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Alquiler</a>
+              <a class="nav-link text-white" href="./alquiler.html">Alquiler</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="./">Nosotros</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="./contacto.html">Contacto</a>
             </li>
           </ul>
         </div>
       </div>
-      <!-- Container -->
     </nav>
-    <main class="container-fluid main-section">
-      <h1 class="text-white">Encuentra tu nueva propiedad</h1>
-    </main>
 
-    <!-- Propiedades en venta -->
-    <section id="venta">
-      <div class="container">
-        <h2>Propiedades en venta</h2>
-        <div class="cards">
-          <div class="card">
-            <img
-              src="https://fotos.perfil.com/2018/09/21/trim/950/534/nueva-york-09212018-366965.jpg"
-              class="card-img"
-              alt="Imagen del departamento"
-            />
-            <div class="card-body">
-              <h5 class="card-title">Apartamento de lujo en zona exclusiva</h5>
-              <p class="card-text">
-                Este apartamento de lujo está ubicado en una exclusiva zona
-                residencial
-              </p>
-              <p>
-                <i class="fas fa-map-marker-alt"></i> 123 Luxury Lane, Prestige
-                Suburb, CA 45678
-              </p>
-              <p>
-                <i class="fas fa-bed"></i> 4 Habitaciones |
-                <i class="fas fa-bath"></i> 4 Baños
-              </p>
-              <p><i class="fas fa-dollar-sign"></i> 5.000</p>
-              <p class="text-danger">
-                <i class="fas fa-smoking-ban"></i> No se permite fumar
-              </p>
-              <p class="text-danger">
-                <i class="fa-solid fa-ban"></i> No se permiten mascotas
-              </p>
-            </div>
-          </div>
-          <div class="card">
-            <img
-              src="https://cdn.bioguia.com/embed/3d0fb0142790e6b90664042cbafcb1581427139/furgoneta.jpg"
-              class="card-img"
-              alt="Imagen del departamento"
-            />
-            <div class="card-body">
-              <h5 class="card-title">Apartamento acogedor en la montaña</h5>
-              <p class="card-text">
-                Este apartamento acogedor está situado en lo alto de una montaña
-                con impresionantes vistas
-              </p>
-              <p>
-                <i class="fas fa-map-marker-alt"></i> 789 Mountain Road, Summit
-                Peaks, CA 23456
-              </p>
-              <p>
-                <i class="fas fa-bed"></i> 2 Habitaciones |
-                <i class="fas fa-bath"></i> 1 Baños
-              </p>
-              <p><i class="fas fa-dollar-sign"></i>1.200</p>
-              <p class="text-success">
-                <i class="fas fa-smoking"></i> Permitido fumar
-              </p>
-              <p class="text-success">
-                <i class="fas fa-paw"></i> Mascotas permitidas
-              </p>
-            </div>
-          </div>
-          <div class="card">
-            <img
-              src="https://resizer.glanacion.com/resizer/fhK-tSVag_8UGJjPMgWrspslPoU=/768x0/filters:quality(80)/cloudfront-us-east-1.images.arcpublishing.com/lanacionar/CUXVMXQE4JD5XIXX4X3PDZAVMY.jpg"
-              class="card-img"
-              alt="Imagen del departamento"
-            />
-            <div class="card-body">
-              <h5 class="card-title">
-                Penthouse de lujo con terraza panorámica
-              </h5>
-              <p class="card-text">
-                Este penthouse de lujo ofrece una terraza panorámica con vistas
-                espectaculares
-              </p>
-              <p>
-                <i class="fas fa-map-marker-alt"></i> 567 Skyline Avenue,
-                Skyview City, CA 56789
-              </p>
-              <p>
-                <i class="fas fa-bed"></i> 3 Habitaciones |
-                <i class="fas fa-bath"></i> 3 Baños
-              </p>
-              <p><i class="fas fa-dollar-sign"></i> 4.500</p>
-              <p class="text-danger">
-                <i class="fas fa-smoking-ban"></i> No se permite fumar
-              </p>
-              <p class="text-success">
-                <i class="fas fa-paw"></i> Mascotas permitidas
-              </p>
-            </div>
-          </div>
-        </div>
-        <a href="#" class="btn btn-dark">Ver todas las propiedades en venta</a>
-      </div>
-      <!-- container -->
-    </section>
-
-    <!-- Propiedades en alquiler -->
-    <section id="alquiler">
-      <div class="container">
-        <h2>Propiedades en alquiler</h2>
-        <div class="cards">
-          <div class="card">
-            <img
-              src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YXBhcnRtZW50fGVufDB8MHwwfHx8MA%3D%3D&auto=format&fit=crop&w=700&q=60"
-              class="card-img"
-              alt="Imagen del departamento"
-            />
-            <div class="card-body">
-              <h5 class="card-title">Apartamento en el centro de la ciudad</h5>
-              <p class="card-text">
-                Este apartamento de 2 habitaciones está ubicado en el corazón de
-                la ciudad, cerca de todo.
-              </p>
-              <p>
-                <i class="fas fa-map-marker-alt"></i> 123 Main Street, Anytown,
-                CA 91234
-              </p>
-              <p>
-                <i class="fas fa-bed"></i> 2 Habitaciones |
-                <i class="fas fa-bath"></i> 2 Baños
-              </p>
-              <p><i class="fas fa-dollar-sign"></i> 2.000</p>
-              <p class="text-danger">
-                <i class="fas fa-smoking-ban"></i> No se permite fumar
-              </p>
-              <p class="text-success">
-                <i class="fas fa-paw"></i> Mascotas permitidas
-              </p>
-            </div>
-          </div>
-          <div class="card">
-            <img
-              src="https://images.unsplash.com/photo-1669071192880-0a94316e6e09?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
-              class="card-img"
-              alt="Imagen del departamento"
-            />
-            <div class="card-body">
-              <h5 class="card-title">Apartamento luminoso con vista al mar</h5>
-              <p class="card-text">
-                Este hermoso apartamento ofrece una vista impresionante al mar
-              </p>
-              <p>
-                <i class="fas fa-map-marker-alt"></i> 456 Ocean Avenue, Seaside
-                Town, CA 56789
-              </p>
-              <p>
-                <i class="fas fa-bed"></i> 3 Habitaciones |
-                <i class="fas fa-bath"></i> 3 Baños
-              </p>
-              <p><i class="fas fa-dollar-sign"></i> 2,500</p>
-              <p class="text-success">
-                <i class="fas fa-smoking"></i> Permitido fumar
-              </p>
-              <p class="text-success">
-                <i class="fas fa-paw"></i> Mascotas permitidas
-              </p>
-            </div>
-          </div>
-          <div class="card">
-            <img
-              src="https://images.unsplash.com/photo-1567496898669-ee935f5f647a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGNvbmRvfGVufDB8MHwwfHx8MA%3D%3D&auto=format&fit=crop&w=1000&q=60"
-              class="card-img"
-              alt="Imagen del departamento"
-            />
-            <div class="card-body">
-              <h5 class="card-title">Condominio moderno en zona residencial</h5>
-              <p class="card-text">
-                Este elegante condominio moderno está ubicado en una tranquila
-                zona residencial
-              </p>
-              <p>
-                <i class="fas fa-map-marker-alt"></i> 123 Main Street, Anytown,
-                CA 91234
-              </p>
-              <p>
-                <i class="fas fa-bed"></i> 2 Habitaciones |
-                <i class="fas fa-bath"></i> 2 Baños
-              </p>
-              <p><i class="fas fa-dollar-sign"></i> 2,200</p>
-              <p class="text-danger">
-                <i class="fas fa-smoking-ban"></i> No se permite fumar
-              </p>
-              <p class="text-danger">
-                <i class="fas fa-ban"></i> No se permiten mascotas
-              </p>
-            </div>
-          </div>
-        </div>
-        <a href="#" class="btn btn-dark"
-          >Ver todas las propiedades en alquiler</a
+    <!--Hero Section-->
+    <section class="hero-section">
+      <div class="container text-light">
+        <div
+          class="mx-auto ms-md-0 ms-lg-0 col-12 col-xs-12 col-md-10 col-lg-8"
         >
+          <h1>
+            Encuentra tu nueva propiedad<br />
+            Web + Gráfica
+          </h1>
+          <p class="mt-2 mb-4 mb-md-4 mb-lg-5 mt-lg-2">
+            Soy Diseñadora Web + Gráfica de Viña del Mar, Chile. He estado en el
+            area del diseño gáfico publicitario y diseño web por más de una
+            década. A lo largo de ese tiempo, he trabajado de forma remota con
+            emocionantes startups y empresas establecidas canadienses y locales.
+          </p>
+        </div>
       </div>
-      <!-- container -->
     </section>
-    <!-- Bootstrap JS -->
+
+    <!-- Main -->
+    <main>
+      <section id="venta">
+        <div class="container">
+          <h2>Propiedades en venta</h2>
+          <div id="cards-venta" class="cards"></div>
+          <button
+            class="btn btn-dark"
+            onclick="window.location.href='./venta.html'"
+          >
+            Ver más
+          </button>
+        </div>
+      </section>
+      <section id="alquiler">
+        <div class="container">
+          <h2>Propiedades en Alquiler</h2>
+          <div id="cards-alquiler" class="cards"></div>
+          <button
+            class="btn btn-dark"
+            onclick="window.location.href='./alquiler.html'"
+          >
+            Ver más
+          </button>
+        </div>
+      </section>
+
+      <!-- Form -->
+      <section id="contact">
+        <div class="container">
+          <div class="contact-block">
+            <!-- Info -->
+            <div class="contact-info">
+              <h2 class="mt-3 mt-lg-4 mt-md-4">Hablemos</h2>
+              <p class="mb-4">
+                Actualmente estoy abierta a explorar nuevas oportunidades como
+                freelance. Si tienes alguna consulta o simplemente quieres
+                saludar, no dudes en ponerte en contacto.
+              </p>
+              <div class="mt-4 social-media-icons">
+                <a href="mailto:barbsmok@gmail.com"
+                  ><img
+                    src="./assets/imgs/icons/envelope-solid.svg"
+                    alt="ícono de un email"
+                    target="_blank"
+                    class="icon"
+                /></a>
+                <a href="https://www.linkedin.com/in/barbarasmok/"
+                  ><img
+                    src="./assets/imgs/icons/linkedin.svg"
+                    alt="ícono de LinkedIn"
+                    target="_blank"
+                    class="icon"
+                /></a>
+                <a href="https://www.instagram.com/barb.smok/"
+                  ><img
+                    src="./assets/imgs/icons/instagram.svg"
+                    alt="ícono de Instagram"
+                    target="_blank"
+                    class="icon"
+                /></a>
+              </div>
+              <!-- Social Icons -->
+            </div>
+            <!-- Contact Info -->
+            <!-- Form -->
+            <div class="contact-form">
+              <form class="text-left mt-5">
+                <div class="mb-3">
+                  <input
+                    type="name"
+                    class="form-control"
+                    id="exampleInputName"
+                    aria-describedby="nameHelp"
+                    placeholder="Nombre"
+                  />
+                </div>
+                <div class="mb-3">
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="exampleInputEmail"
+                    aria-describedby="emailHelp"
+                    placeholder="Correo Electrónico"
+                  />
+                </div>
+                <div class="mb-3">
+                  <textarea
+                    class="form-control"
+                    id="exampleFormControlTextarea1"
+                    rows="3"
+                    placeholder="Tu mensaje"
+                  ></textarea>
+                </div>
+                <button type="submit" class="btn btn-dark">Enviar</button>
+              </form>
+            </div>
+            <!-- Contact Form -->
+          </div>
+          <!-- Contact Block -->
+        </div>
+        <!-- Container -->
+      </section>
+      <footer class="copyright mt-5">
+        <div class="container">
+          <div>
+            <p>© 2024 by Inmobiliaria. All Rights Reserved.</p>
+          </div>
+        </div>
+      </footer>
+    </main>
+    <script src="./assets/js/script.js"></script>
+    <!-- Boostrap JS -->
     <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
   </body>
