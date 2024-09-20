@@ -1,6 +1,7 @@
 // Object Arrays
 const propertiesVenta = [
   {
+    category: 'Venta',
     nombre: 'Casa en Viña del Mar',
     src: '../assets/imgs/properties/venta-1.png',
     descripcion: 'Hermosa casa con vista al mar',
@@ -11,7 +12,8 @@ const propertiesVenta = [
     pets: true,
   },
   {
-    nombre: 'Departamento en Santiago',
+    category: 'Venta',
+    nombre: 'Casa en Con Con',
     src: '../assets/imgs/properties/venta-2.png',
     descripcion: 'Moderno departamento en el centro',
     ubicacion: 'Santiago',
@@ -21,7 +23,8 @@ const propertiesVenta = [
     pets: false,
   },
   {
-    nombre: 'Casa en Valparaíso',
+    category: 'Venta',
+    nombre: 'Casa en Viña del Mar',
     src: '../assets/imgs/properties/venta-3.png',
     descripcion: 'Casa amplia y luminosa',
     ubicacion: 'Valparaíso',
@@ -31,7 +34,8 @@ const propertiesVenta = [
     pets: true,
   },
   {
-    nombre: 'Departamento en La Serena',
+    category: 'Venta',
+    nombre: 'Casa en Curauma',
     src: '../assets/imgs/properties/venta-4.png',
     descripcion: 'Departamento con piscina',
     ubicacion: 'La Serena',
@@ -41,7 +45,8 @@ const propertiesVenta = [
     pets: true,
   },
   {
-    nombre: 'Casa en Puerto Varas',
+    category: 'Venta',
+    nombre: 'Departamento en Santiago',
     src: '../assets/imgs/properties/venta-5.png',
     descripcion: 'Casa en la naturaleza con vista al lago',
     ubicacion: 'Puerto Varas',
@@ -51,7 +56,8 @@ const propertiesVenta = [
     pets: true,
   },
   {
-    nombre: 'Departamento en Concepción',
+    category: 'Venta',
+    nombre: 'Departamento en Reñaca',
     src: '../assets/imgs/properties/venta-6.png',
     descripcion: 'Departamento céntrico en Concepción',
     ubicacion: 'Concepción',
@@ -64,7 +70,8 @@ const propertiesVenta = [
 
 const propertiesAlquiler = [
   {
-    nombre: 'Casa en Concepción',
+    category: 'Alquiler',
+    nombre: 'Departamento en Las Condes',
     src: '../assets/imgs/properties/alquiler-1.png',
     descripcion: 'Casa moderna y acogedora',
     ubicacion: 'Concepción',
@@ -74,7 +81,8 @@ const propertiesAlquiler = [
     pets: false,
   },
   {
-    nombre: 'Departamento en Antofagasta',
+    category: 'Alquiler',
+    nombre: 'Departamento en Bellas Artes',
     src: '../assets/imgs/properties/alquiler-2.png',
     descripcion: 'Departamento con vista al mar',
     ubicacion: 'Antofagasta',
@@ -84,7 +92,8 @@ const propertiesAlquiler = [
     pets: true,
   },
   {
-    nombre: 'Casa en Temuco',
+    category: 'Alquiler',
+    nombre: 'Departamento en Santiago',
     src: '../assets/imgs/properties/alquiler-3.png',
     descripcion: 'Casa en un barrio tranquilo',
     ubicacion: 'Temuco',
@@ -94,7 +103,8 @@ const propertiesAlquiler = [
     pets: false,
   },
   {
-    nombre: 'Departamento en Rancagua',
+    category: 'Alquiler',
+    nombre: 'Casa en Reñaca',
     src: '../assets/imgs/properties/alquiler-4.png',
     descripcion: 'Departamento céntrico',
     ubicacion: 'Rancagua',
@@ -104,7 +114,8 @@ const propertiesAlquiler = [
     pets: true,
   },
   {
-    nombre: 'Departamento en Viña del Mar',
+    category: 'Alquiler',
+    nombre: 'Departamento en Providencia',
     src: '../assets/imgs/properties/alquiler-5.png',
     descripcion: 'Moderno departamento cerca de la playa',
     ubicacion: 'Viña del Mar',
@@ -114,7 +125,8 @@ const propertiesAlquiler = [
     pets: true,
   },
   {
-    nombre: 'Casa en Puerto Montt',
+    category: 'Alquiler',
+    nombre: 'Casa en Ñuñoa',
     src: '../assets/imgs/properties/alquiler-6.png',
     descripcion: 'Casa familiar con jardín amplio',
     ubicacion: 'Puerto Montt',
@@ -144,6 +156,7 @@ function renderCards(properties, containerId, limit = properties.length) {
     const cardBody = document.createElement('div');
     cardBody.classList.add('card-body');
     cardBody.innerHTML = `
+      <h4 class="card-category">${property.category}</h4>
       <h3 class="card-title">${property.nombre}</h3>
       <p class="card-text">${property.descripcion}</p>
       <p class="textIcon"><i class="fas fa-bed"></i> ${
@@ -193,12 +206,21 @@ if (document.title.includes('Alquiler')) {
   renderCards(propertiesAlquiler, 'cards-alquiler');
 }
 
-// Cambia el color de fondo de la main nav
-window.addEventListener('scroll', function () {
+// Cambia el color de fondo de la main nav cuando se avanza y cambia el color de fondo cuando se abre el menu en tablet y mobile
+
+document.addEventListener('DOMContentLoaded', function () {
+  const navbarToggler = document.querySelector('.navbar-toggler');
   const navbar = document.querySelector('.navbar');
-  if (window.scrollY > 50) {
-    navbar.classList.add('scrolled');
-  } else {
-    navbar.classList.remove('scrolled');
-  }
+
+  navbarToggler.addEventListener('click', function () {
+    navbar.classList.toggle('toggled-open');
+  });
+
+  window.addEventListener('scroll', function () {
+    if (window.scrollY > 30) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+  });
 });
