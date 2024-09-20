@@ -3,7 +3,7 @@ const propertiesVenta = [
   {
     category: 'Venta',
     nombre: 'Casa en Viña del Mar',
-    src: '../assets/imgs/properties/venta-1.png',
+    src: './assets/imgs/properties/venta-1.png',
     descripcion: 'Hermosa casa con vista al mar',
     ubicacion: 'Viña del Mar',
     habitaciones: 3,
@@ -14,7 +14,7 @@ const propertiesVenta = [
   {
     category: 'Venta',
     nombre: 'Casa en Con Con',
-    src: '../assets/imgs/properties/venta-2.png',
+    src: './assets/imgs/properties/venta-2.png',
     descripcion: 'Moderno departamento en el centro',
     ubicacion: 'Santiago',
     habitaciones: 2,
@@ -25,7 +25,7 @@ const propertiesVenta = [
   {
     category: 'Venta',
     nombre: 'Casa en Viña del Mar',
-    src: '../assets/imgs/properties/venta-3.png',
+    src: './assets/imgs/properties/venta-3.png',
     descripcion: 'Casa amplia y luminosa',
     ubicacion: 'Valparaíso',
     habitaciones: 4,
@@ -36,7 +36,7 @@ const propertiesVenta = [
   {
     category: 'Venta',
     nombre: 'Casa en Curauma',
-    src: '../assets/imgs/properties/venta-4.png',
+    src: './assets/imgs/properties/venta-4.png',
     descripcion: 'Departamento con piscina',
     ubicacion: 'La Serena',
     habitaciones: 2,
@@ -47,7 +47,7 @@ const propertiesVenta = [
   {
     category: 'Venta',
     nombre: 'Departamento en Santiago',
-    src: '../assets/imgs/properties/venta-5.png',
+    src: './assets/imgs/properties/venta-5.png',
     descripcion: 'Casa en la naturaleza con vista al lago',
     ubicacion: 'Puerto Varas',
     habitaciones: 5,
@@ -58,7 +58,7 @@ const propertiesVenta = [
   {
     category: 'Venta',
     nombre: 'Departamento en Reñaca',
-    src: '../assets/imgs/properties/venta-6.png',
+    src: './assets/imgs/properties/venta-6.png',
     descripcion: 'Departamento céntrico en Concepción',
     ubicacion: 'Concepción',
     habitaciones: 3,
@@ -72,7 +72,7 @@ const propertiesAlquiler = [
   {
     category: 'Alquiler',
     nombre: 'Departamento en Las Condes',
-    src: '../assets/imgs/properties/alquiler-1.png',
+    src: './assets/imgs/properties/alquiler-1.png',
     descripcion: 'Casa moderna y acogedora',
     ubicacion: 'Concepción',
     habitaciones: 3,
@@ -83,7 +83,7 @@ const propertiesAlquiler = [
   {
     category: 'Alquiler',
     nombre: 'Departamento en Bellas Artes',
-    src: '../assets/imgs/properties/alquiler-2.png',
+    src: './assets/imgs/properties/alquiler-2.png',
     descripcion: 'Departamento con vista al mar',
     ubicacion: 'Antofagasta',
     habitaciones: 1,
@@ -94,7 +94,7 @@ const propertiesAlquiler = [
   {
     category: 'Alquiler',
     nombre: 'Departamento en Santiago',
-    src: '../assets/imgs/properties/alquiler-3.png',
+    src: './assets/imgs/properties/alquiler-3.png',
     descripcion: 'Casa en un barrio tranquilo',
     ubicacion: 'Temuco',
     habitaciones: 4,
@@ -105,7 +105,7 @@ const propertiesAlquiler = [
   {
     category: 'Alquiler',
     nombre: 'Casa en Reñaca',
-    src: '../assets/imgs/properties/alquiler-4.png',
+    src: './assets/imgs/properties/alquiler-4.png',
     descripcion: 'Departamento céntrico',
     ubicacion: 'Rancagua',
     habitaciones: 2,
@@ -116,7 +116,7 @@ const propertiesAlquiler = [
   {
     category: 'Alquiler',
     nombre: 'Departamento en Providencia',
-    src: '../assets/imgs/properties/alquiler-5.png',
+    src: './assets/imgs/properties/alquiler-5.png',
     descripcion: 'Moderno departamento cerca de la playa',
     ubicacion: 'Viña del Mar',
     habitaciones: 2,
@@ -127,7 +127,7 @@ const propertiesAlquiler = [
   {
     category: 'Alquiler',
     nombre: 'Casa en Ñuñoa',
-    src: '../assets/imgs/properties/alquiler-6.png',
+    src: './assets/imgs/properties/alquiler-6.png',
     descripcion: 'Casa familiar con jardín amplio',
     ubicacion: 'Puerto Montt',
     habitaciones: 4,
