@@ -108,7 +108,12 @@ header {
 }
 /* Navbar */
 .navbar {
-  padding: 0;
+  background-color: transparent;
+  transition: background-color 0.3s ease-in-out; /* Smooth transition */
+}
+.navbar.scrolled,
+.navbar-toggler.collapsed + .navbar-collapse.show {
+  background-color: #242424;
 }
 .nav-link {
   display: block;
@@ -122,6 +127,10 @@ header {
   font-weight: 600;
   letter-spacing: 0.2em;
   font-size: 0.9rem;
+}
+/* Change active nav link color */
+.navbar-nav .nav-link.active {
+  color: #e35d6a !important;
 }
 .navbar-brand img {
   width: 50%;
@@ -164,20 +173,46 @@ button:focus:not(:focus-visible) {
 }
 /* Hero Section */
 .hero-section {
-  background-image: url('../imgs/img-main.jpeg');
+  position: relative;
+  background-image: url('../imgs/banners/home-banner.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  height: 100vh;
+  height: 120vh;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   align-content: center;
   justify-content: flex-end;
-  padding-bottom: 2rem;
+  padding: 4rem 1rem;
 }
-.hero-md {
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.6),
+    rgba(0, 0, 0, 0)
+  );
+  z-index: 1;
+}
+.hero-section > * {
+  position: relative;
+  z-index: 2;
+}
+.hero-ventas,
+.hero-alquiler {
   height: 70vh;
+}
+.hero-ventas {
+  background-image: url('../imgs/banners/ventas-banner.jpg');
+}
+.hero-alquiler {
+  background-image: url('../imgs/banners/alquiler-banner.jpg');
 }
 
 /* Cards */
@@ -186,7 +221,7 @@ button:focus:not(:focus-visible) {
   display: block;
   height: auto;
   margin: 0 auto;
-  padding: 6rem 2rem;
+  padding: 4rem 1rem;
 }
 #venta {
   background-color: rgb(240, 240, 240);
@@ -194,7 +229,13 @@ button:focus:not(:focus-visible) {
 #alquiler {
   background-color: rgb(249, 249, 249);
 }
-#cards-venta {
+.venta-block,
+.alquiler-block {
+  display: block;
+  text-align: center;
+}
+#cards-venta,
+#cards-alquiler {
   display: grid;
   gap: 1.5rem;
   margin: 2rem 0;
@@ -209,18 +250,18 @@ button:focus:not(:focus-visible) {
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: center;
-  align-content: center;
-  align-items: center;
+  text-align: left;
   border: none;
   border-radius: 1.5rem;
 }
 .card-body {
   padding: 1rem 2rem;
-  text-align: center;
+  text-align: left;
 }
 .card-title {
   margin-bottom: 0.5rem;
-  text-align: center;
+  text-align: left;
+  font-size: 1.5rem;
 }
 .card:hover {
   box-shadow: 0px 10px 15px rgb(36 36 36 / 8%);
@@ -242,15 +283,69 @@ button:focus:not(:focus-visible) {
   font-weight: 500;
 }
 
-/* Footer */
+/* Text + Img */
+.text-img {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.img-block img {
+  width: 100%;
+  border-radius: 1rem;
+}
+.img-block {
+  display: block;
+  width: 100%;
+}
+#about {
+  background-color: rgb(240, 240, 240);
+  display: block;
+  height: auto;
+  margin: 0 auto;
+  padding: 4rem 1rem;
+}
+/* Contact */
 #contact {
   padding: 2rem;
   display: block;
+  height: auto;
+  margin: 0 auto;
+  padding: 4rem 1rem;
 }
 .contact-block {
   display: flex;
-  flex-wrap: wrap;
   flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  gap: 4rem;
+}
+.contact-info {
+  flex: 1;
+}
+.contact-logo-block {
+  flex: 1;
+  margin-top: 2rem;
+}
+.contact-logo-block img {
+  max-width: 100%;
+  height: auto;
+}
+.contact-form {
+  width: 100%;
+}
+.contact-form input,
+.contact-form textarea {
+  width: 100%; /* Make input fields, textarea, and button full width */
+  max-width: 100%; /* Ensure no extra spacing */
+  margin-bottom: 1rem; /* Add some spacing between form elements */
+}
+
+.contact-form textarea {
+  resize: vertical; /* Allow textarea resizing vertically */
 }
 .copyright {
   padding: 1rem;
@@ -312,6 +407,22 @@ button:focus:not(:focus-visible) {
   .hero-md {
     height: 60vh;
   }
+  .contact-block {
+    flex-direction: row;
+    text-align: left;
+  }
+
+  .contact-info,
+  .contact-logo-block {
+    text-align: left;
+    margin-top: 0;
+  }
+}
+@media (max-width: 991px) {
+  /* This targets devices under 992px width */
+  .navbar-toggler:not(.collapsed) + .navbar-collapse {
+    background-color: #242424; /* Ensures background is #242424 when navbar is toggled */
+  }
 }
 
 /* Large devices (desktops, 992px and up) */
@@ -338,6 +449,7 @@ button:focus:not(:focus-visible) {
     display: flex !important;
     flex-basis: auto;
     justify-content: flex-end;
+    background-color: transparent; /* Ensures background is transparent on larger screens */
   }
   .navbar-collapse {
     padding-top: 0;
@@ -351,6 +463,22 @@ button:focus:not(:focus-visible) {
   .hero-md {
     height: 60vh;
   }
+  .contact-block {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .text-img {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    gap: 4rem;
+  }
 }
 
 /* Large devices (desktops, 992px and up) */
@@ -359,11 +487,6 @@ button:focus:not(:focus-visible) {
     width: 1024px;
     margin: 0 auto;
     padding: 1rem;
-  }
-  .contact-block {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
   }
   .navbar-brand img {
     width: 35%;
@@ -385,11 +508,6 @@ button:focus:not(:focus-visible) {
     width: 1140px;
     margin: 0 auto;
     padding: 1rem;
-  }
-  .contact-block {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
   }
   .hero-section {
     height: 80vh;

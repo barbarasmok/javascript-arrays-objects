@@ -42,7 +42,7 @@
   <body>
     <!-- Navbar -->
     <nav
-      class="navbar fixed-top navbar-dark bg-dark navbar-expand-lg text-white mx-auto"
+      class="navbar fixed-top navbar-dark navbar-expand-lg text-white mx-auto"
       data-bs-theme="dark"
     >
       <div class="container">
@@ -75,9 +75,6 @@
               <a class="nav-link text-white" href="./alquiler.html">Alquiler</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-white" href="./">Nosotros</a>
-            </li>
-            <li class="nav-item">
               <a class="nav-link text-white" href="./contacto.html">Contacto</a>
             </li>
           </ul>
@@ -92,14 +89,14 @@
           class="mx-auto ms-md-0 ms-lg-0 col-12 col-xs-12 col-md-10 col-lg-8"
         >
           <h1>
-            Encuentra tu nueva propiedad<br />
-            Web + Gráfica
+            Descubre tu nuevo hogar con<br />
+            Inmobiliaria Chile
           </h1>
           <p class="mt-2 mb-4 mb-md-4 mb-lg-5 mt-lg-2">
-            Soy Diseñadora Web + Gráfica de Viña del Mar, Chile. He estado en el
-            area del diseño gáfico publicitario y diseño web por más de una
-            década. A lo largo de ese tiempo, he trabajado de forma remota con
-            emocionantes startups y empresas establecidas canadienses y locales.
+            Explora propiedades exclusivas en Viña del Mar, Santiago y más allá.
+            Con más de una década de experiencia, Inmobiliaria Chile es tu socio
+            confiable en la búsqueda de la casa perfecta o la inversión
+            inmobiliaria ideal.
           </p>
         </div>
       </div>
@@ -109,26 +106,52 @@
     <main>
       <section id="venta">
         <div class="container">
-          <h2>Propiedades en venta</h2>
-          <div id="cards-venta" class="cards"></div>
-          <button
-            class="btn btn-dark"
-            onclick="window.location.href='./venta.html'"
-          >
-            Ver más
-          </button>
+          <div class="venta-block">
+            <h2>Propiedades en venta</h2>
+            <div id="cards-venta" class="cards"></div>
+            <button
+              class="btn btn-dark"
+              onclick="window.location.href='./venta.html'"
+            >
+              Ver más
+            </button>
+          </div>
         </div>
       </section>
       <section id="alquiler">
         <div class="container">
-          <h2>Propiedades en Alquiler</h2>
-          <div id="cards-alquiler" class="cards"></div>
-          <button
-            class="btn btn-dark"
-            onclick="window.location.href='./alquiler.html'"
-          >
-            Ver más
-          </button>
+          <div class="alquiler-block">
+            <h2>Propiedades en Alquiler</h2>
+            <div id="cards-alquiler" class="cards"></div>
+            <button
+              class="btn btn-dark"
+              onclick="window.location.href='./alquiler.html'"
+            >
+              Ver más
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section id="about">
+        <div class="container">
+          <div class="text-img">
+            <div class="img-block">
+              <img src="./assets/imgs/about.png" alt="" />
+            </div>
+            <div class="text-block">
+              <h2>Nuestra historia</h2>
+              <p>
+                Inmobiliaria Chile lidera el mercado de bienes raíces con un
+                enfoque innovador y personalizado. Nuestro equipo de expertos
+                ofrece soluciones integrales, desde la valoración hasta la venta
+                y alquiler de propiedades, asegurando una experiencia
+                excepcional para cada cliente. Nos dedicamos a conectar personas
+                con lugares, creando hogares y oportunidades de inversión
+                inigualables.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -139,10 +162,13 @@
             <!-- Info -->
             <div class="contact-info">
               <h2 class="mt-3 mt-lg-4 mt-md-4">Hablemos</h2>
-              <p class="mb-4">
-                Actualmente estoy abierta a explorar nuevas oportunidades como
-                freelance. Si tienes alguna consulta o simplemente quieres
-                saludar, no dudes en ponerte en contacto.
+              <p>
+                En Inmobiliaria Chile, estamos listos para ayudarte a encontrar
+                tu próximo hogar o a maximizar el valor de tu propiedad.
+                Contáctanos para descubrir cómo podemos ayudarte en tu viaje
+                inmobiliario. Ya sea que estés comprando, vendiendo o
+                alquilando, nuestro equipo está aquí para asesorarte en cada
+                paso.
               </p>
               <div class="mt-4 social-media-icons">
                 <a href="mailto:barbsmok@gmail.com"
@@ -168,41 +194,44 @@
                 /></a>
               </div>
               <!-- Social Icons -->
+              <!-- Form -->
+              <div class="contact-form">
+                <form class="text-left">
+                  <div class="mb-3">
+                    <input
+                      type="name"
+                      class="form-control"
+                      id="exampleInputName"
+                      aria-describedby="nameHelp"
+                      placeholder="Nombre"
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="exampleInputEmail"
+                      aria-describedby="emailHelp"
+                      placeholder="Correo Electrónico"
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <textarea
+                      class="form-control"
+                      id="exampleFormControlTextarea1"
+                      rows="3"
+                      placeholder="Tu mensaje"
+                    ></textarea>
+                  </div>
+                  <button type="submit" class="btn btn-dark">Enviar</button>
+                </form>
+              </div>
+              <!-- Contact Form -->
             </div>
-            <!-- Contact Info -->
-            <!-- Form -->
-            <div class="contact-form">
-              <form class="text-left mt-5">
-                <div class="mb-3">
-                  <input
-                    type="name"
-                    class="form-control"
-                    id="exampleInputName"
-                    aria-describedby="nameHelp"
-                    placeholder="Nombre"
-                  />
-                </div>
-                <div class="mb-3">
-                  <input
-                    type="email"
-                    class="form-control"
-                    id="exampleInputEmail"
-                    aria-describedby="emailHelp"
-                    placeholder="Correo Electrónico"
-                  />
-                </div>
-                <div class="mb-3">
-                  <textarea
-                    class="form-control"
-                    id="exampleFormControlTextarea1"
-                    rows="3"
-                    placeholder="Tu mensaje"
-                  ></textarea>
-                </div>
-                <button type="submit" class="btn btn-dark">Enviar</button>
-              </form>
+            <!-- Contact Logo -->
+            <div class="contact-logo-block">
+              <img src="./assets/imgs/barbsmok-logo.png" alt="" />
             </div>
-            <!-- Contact Form -->
           </div>
           <!-- Contact Block -->
         </div>

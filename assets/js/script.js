@@ -2,7 +2,7 @@
 const propertiesVenta = [
   {
     nombre: 'Casa en Viña del Mar',
-    src: '../assets/imgs/img-template.png',
+    src: '../assets/imgs/properties/venta-1.png',
     descripcion: 'Hermosa casa con vista al mar',
     ubicacion: 'Viña del Mar',
     habitaciones: 3,
@@ -12,7 +12,7 @@ const propertiesVenta = [
   },
   {
     nombre: 'Departamento en Santiago',
-    src: '../assets/imgs/img-template.png',
+    src: '../assets/imgs/properties/venta-2.png',
     descripcion: 'Moderno departamento en el centro',
     ubicacion: 'Santiago',
     habitaciones: 2,
@@ -22,7 +22,7 @@ const propertiesVenta = [
   },
   {
     nombre: 'Casa en Valparaíso',
-    src: '../assets/imgs/img-template.png',
+    src: '../assets/imgs/properties/venta-3.png',
     descripcion: 'Casa amplia y luminosa',
     ubicacion: 'Valparaíso',
     habitaciones: 4,
@@ -32,7 +32,7 @@ const propertiesVenta = [
   },
   {
     nombre: 'Departamento en La Serena',
-    src: '../assets/imgs/img-template.png',
+    src: '../assets/imgs/properties/venta-4.png',
     descripcion: 'Departamento con piscina',
     ubicacion: 'La Serena',
     habitaciones: 2,
@@ -42,7 +42,7 @@ const propertiesVenta = [
   },
   {
     nombre: 'Casa en Puerto Varas',
-    src: '../assets/imgs/img-template.png',
+    src: '../assets/imgs/properties/venta-5.png',
     descripcion: 'Casa en la naturaleza con vista al lago',
     ubicacion: 'Puerto Varas',
     habitaciones: 5,
@@ -52,7 +52,7 @@ const propertiesVenta = [
   },
   {
     nombre: 'Departamento en Concepción',
-    src: '../assets/imgs/img-template.png',
+    src: '../assets/imgs/properties/venta-6.png',
     descripcion: 'Departamento céntrico en Concepción',
     ubicacion: 'Concepción',
     habitaciones: 3,
@@ -65,7 +65,7 @@ const propertiesVenta = [
 const propertiesAlquiler = [
   {
     nombre: 'Casa en Concepción',
-    src: '../assets/imgs/img-template.png',
+    src: '../assets/imgs/properties/alquiler-1.png',
     descripcion: 'Casa moderna y acogedora',
     ubicacion: 'Concepción',
     habitaciones: 3,
@@ -75,7 +75,7 @@ const propertiesAlquiler = [
   },
   {
     nombre: 'Departamento en Antofagasta',
-    src: '../assets/imgs/img-template.png',
+    src: '../assets/imgs/properties/alquiler-2.png',
     descripcion: 'Departamento con vista al mar',
     ubicacion: 'Antofagasta',
     habitaciones: 1,
@@ -85,7 +85,7 @@ const propertiesAlquiler = [
   },
   {
     nombre: 'Casa en Temuco',
-    src: '../assets/imgs/img-template.png',
+    src: '../assets/imgs/properties/alquiler-3.png',
     descripcion: 'Casa en un barrio tranquilo',
     ubicacion: 'Temuco',
     habitaciones: 4,
@@ -95,7 +95,7 @@ const propertiesAlquiler = [
   },
   {
     nombre: 'Departamento en Rancagua',
-    src: '../assets/imgs/img-template.png',
+    src: '../assets/imgs/properties/alquiler-4.png',
     descripcion: 'Departamento céntrico',
     ubicacion: 'Rancagua',
     habitaciones: 2,
@@ -105,7 +105,7 @@ const propertiesAlquiler = [
   },
   {
     nombre: 'Departamento en Viña del Mar',
-    src: '../assets/imgs/img-template.png',
+    src: '../assets/imgs/properties/alquiler-5.png',
     descripcion: 'Moderno departamento cerca de la playa',
     ubicacion: 'Viña del Mar',
     habitaciones: 2,
@@ -115,7 +115,7 @@ const propertiesAlquiler = [
   },
   {
     nombre: 'Casa en Puerto Montt',
-    src: '../assets/imgs/img-template.png',
+    src: '../assets/imgs/properties/alquiler-6.png',
     descripcion: 'Casa familiar con jardín amplio',
     ubicacion: 'Puerto Montt',
     habitaciones: 4,
@@ -133,47 +133,44 @@ function renderCards(properties, containerId, limit = properties.length) {
     const property = properties[i];
     const cardDiv = document.createElement('div');
     cardDiv.classList.add('card');
-    cardDiv.innerHTML = `<img src="${property.src}" alt="${
-      property.nombre
-    }" class="card-img">
-            <h3 class="card-title">${property.nombre}</h3>
-            <p class="card-text">${property.descripcion}</p>
-            <div>
-                <p class="textIcon">
-                    <i class="fas fa-bed"></i> ${
-                      property.habitaciones
-                    } Habitaciones
-                </p>
-            </div>
-            <div class="propertyCost">
-                <p class="textIcon">
-                    <i class="fas fa-dollar-sign"></i> ${property.costo}
-                </p>
-            </div>
-            <div class="propertySmoke">
-                <p class="${
-                  property.smoke
-                    ? 'text-success textIconSmoke'
-                    : 'text-danger textIconSmoke'
-                }">
-                    <i class="fas fa-smoking"></i> ${
-                      property.smoke ? 'Permitido fumar' : 'Prohibido fumar'
-                    }
-                </p>
-            </div>
-            <div class="propertyPets">
-                <p class="${
-                  property.pets
-                    ? 'text-success textIconPets'
-                    : 'text-danger textIconPets'
-                }">
-                    <i class="fas fa-paw"></i> ${
-                      property.pets
-                        ? 'Mascotas permitidas'
-                        : 'Mascotas prohibidas'
-                    }
-                </p>
-            </div>`;
+
+    // Create the image element separately
+    const img = document.createElement('img');
+    img.src = property.src;
+    img.alt = property.nombre;
+    img.classList.add('card-img'); // Using Bootstrap's class for better styling
+
+    // Create the card body element and include other details inside it
+    const cardBody = document.createElement('div');
+    cardBody.classList.add('card-body');
+    cardBody.innerHTML = `
+      <h3 class="card-title">${property.nombre}</h3>
+      <p class="card-text">${property.descripcion}</p>
+      <p class="textIcon"><i class="fas fa-bed"></i> ${
+        property.habitaciones
+      } Habitaciones</p>
+      <p class="propertyCost textIcon"><i class="fas fa-dollar-sign"></i> ${
+        property.costo
+      }</p>
+      <p class="${
+        property.smoke ? 'text-success' : 'text-danger'
+      } textIconSmoke">
+        <i class="fas fa-smoking"></i> ${
+          property.smoke ? 'Permitido fumar' : 'Prohibido fumar'
+        }
+      </p>
+      <p class="${property.pets ? 'text-success' : 'text-danger'} textIconPets">
+        <i class="fas fa-paw"></i> ${
+          property.pets ? 'Mascotas permitidas' : 'Mascotas prohibidas'
+        }
+      </p>
+    `;
+
+    // Append image and card body to card div
+    cardDiv.appendChild(img);
+    cardDiv.appendChild(cardBody);
+
+    // Append the card to the container
     container.appendChild(cardDiv);
   }
 }
@@ -195,3 +192,13 @@ if (document.title.includes('Venta')) {
 if (document.title.includes('Alquiler')) {
   renderCards(propertiesAlquiler, 'cards-alquiler');
 }
+
+// Cambia el color de fondo de la main nav
+window.addEventListener('scroll', function () {
+  const navbar = document.querySelector('.navbar');
+  if (window.scrollY > 50) {
+    navbar.classList.add('scrolled');
+  } else {
+    navbar.classList.remove('scrolled');
+  }
+});
